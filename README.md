@@ -43,3 +43,39 @@ pnpm test:unit
 ```sh
 pnpm lint
 ```
+
+## Using npm Instead of pnpm
+
+If you prefer to use `npm` instead of `pnpm`, follow these steps:
+
+1. **Install Dependencies**:
+   Replace `pnpm install` with:
+
+   ```sh
+   npm install
+   ```
+
+2. **Run Scripts**:
+   Replace `pnpm <script>` with:
+
+   ```sh
+   npm run <script>
+   ```
+
+   For example:
+
+   - To start the development server: `npm run dev`
+   - To build the project: `npm run build`
+
+3. **Fix Potential Issues**:
+
+   - If you encounter issues related to `node_modules`, delete the `node_modules` folder and the `pnpm-lock.yaml` file, then run:
+     ```sh
+     npm install
+     ```
+   - If the project uses `pnpm`-specific features (e.g., workspace support), you may need to adjust the configuration to work with `npm`.
+
+4. **Update Lock File**:
+   If you switch to `npm`, the `pnpm-lock.yaml` file will no longer be used. Instead, `npm` will generate a `package-lock.json` file.
+
+By following these steps, you can seamlessly use `npm` instead of `pnpm` for this project.
