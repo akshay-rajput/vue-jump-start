@@ -3,8 +3,8 @@
     <h1 class="text-stone-500 mb-4 text-lg">Sample Component</h1>
     <p class="mb-2">Message prop: {{ message }}</p>
     <p class="mb-2">Current date and time: {{ new Date().toLocaleString() }}</p>
-    <p class="mb-2">Current environment: {{ nodeEnv }}</p>
-    <p class="mb-2">Current version: {{ appVersion }}</p>
+    <p class="mb-2" v-if="nodeEnv">Current environment: {{ nodeEnv }}</p>
+    <p class="mb-2" v-if="appVersion">Current version: {{ appVersion }}</p>
   </div>
 </template>
 
