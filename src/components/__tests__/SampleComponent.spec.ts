@@ -5,7 +5,8 @@ import Sample from '../SampleComponent.vue'
 
 describe('Sample', () => {
   it('renders properly', () => {
-    const wrapper = mount(Sample, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
+    const wrapper = mount(Sample, { props: { message: 'Hello Vitest' } })
+    const messageWrapper = wrapper.find('#message')
+    expect(messageWrapper.text()).toBe('Message prop: Hello Vitest')
   })
 })
